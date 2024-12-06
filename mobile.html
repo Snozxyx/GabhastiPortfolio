@@ -1,0 +1,308 @@
+<!-- MADE BY GABHASTI GIRI SINHA
+CLASS IX C 
+ROLL 19 
+Admission NO : 16793 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabhasti</title>
+    <meta name="theme-color" content="#db5945">
+    <link rel="stylesheet" href="assets/css/global/mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+        }
+
+        body{
+            background: linear-gradient(65deg, #2d292f, #656367, #513b67);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 32s ease infinite;
+    -moz-animation: AnimationName 32s ease infinite;
+    -o-animation: AnimationName 32s ease infinite;
+    animation: AnimationName 32s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: relative;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s;
+        }
+
+        header.scrolled {
+            background: rgba(0, 0, 0, 0.9); /* Darker on scroll */
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #db5945;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 3px;
+            background: white;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger:before,
+        .hamburger:after {
+            content: '';
+            width: 30px;
+            height: 3px;
+            background: white;
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger:before {
+            top: -10px; /* Positioning for top line */
+        }
+
+        .hamburger:after {
+            top: 10px; /* Positioning for bottom line */
+        }
+
+        .nav-menu {
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            position: absolute;
+            top: 60px; /* Below the navbar */
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 9;
+        }
+
+        .nav-menu.show {
+            display: flex; /* Show on toggle */
+        }
+
+        .nav-menu a {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-menu a:last-child {
+            border-bottom: none; /* Remove last border */
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+        }
+
+        .whoami-title {
+            font-size: 3rem;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin: 1rem 0;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            margin: 0 1rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn-primary {
+            background: #db5945;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #db5945;
+            color: #db5945;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            color: #db5945;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary:hover {
+            background: #db5945;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .whoami {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .whoami-titles {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide links on mobile */
+            }
+
+            .nav-toggle {
+                display: block; /* Show hamburger icon */
+            }
+
+            .whoami-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.5rem 1.5rem;
+            }
+
+            .whoami-titles {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-container" id="content">
+     
+        <header>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </nav>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </header>
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="whoami-title">Teaching you the <br> craft of frontend</h1>
+                <p class="hero-subtitle">
+                    With so much competition amongst software engineers, your work 
+                    needs to stand out. I am here to help you with that.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Learn about PRO &#x2192;</a>
+                    <a href="#" class="btn btn-secondary">More on YouTube!</a>
+                </div>
+            </div>
+        </section>
+        <section class="whoami">
+            <div class="container">
+                <h1 class="whoami-titles">WHO AM I?</h1>
+            </div>
+        </section>
+    </div>
+
+    <script src="./assets/js/global/mobile.js"></script>
+    <script>
+        // JavaScript for toggling the nav menu
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Change header background on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
